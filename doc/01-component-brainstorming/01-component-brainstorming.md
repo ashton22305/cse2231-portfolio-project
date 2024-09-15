@@ -1,12 +1,10 @@
 # Portfolio Part 1: Component Brainstorming
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment -->
-- **Due Date**: <!-- TODO: fill with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment -->
+- **Name**: Ashton South
+- **Dot Number**: south.80
+- **Due Date**: 9/13 @ 3:00PM
 
 ## Assignment Overview
-
-<!-- TODO: read the assignment overview then delete this comment -->
 
 The overall goal of the portfolio project is to have you design and implement
 your own OSU component. There are no limits to what you choose to design and
@@ -29,8 +27,6 @@ implement.
 
 ## Assignment Checklist
 
-<!-- TODO: browse the checklist then delete this comment -->
-
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
 opening the TODOs window from the sidebar. The icon looks like a tree and will
@@ -52,8 +48,6 @@ to the tree diagram (you may remove this one as well):
 
 ## Assignment Learning Objectives
 
-<!-- TODO: read the assignment learning objectives then delete this comment -->
-
 Without learning objectives, there really is no clear reason why a particular
 assessment or activity exists. Therefore, to be completely transparent, here is
 what we're hoping you will learn through this particular aspect of the portfolio
@@ -66,8 +60,6 @@ project. Specifically, students should be able to:
    discipline
 
 ## Assignment Rubric: 10 Points
-
-<!-- TODO: read the assignment rubric then delete this comment -->
 
 Again, to be completely transparent, most of the portfolio project, except the
 final submission, is designed as a formative assessment. Formative assessments
@@ -98,23 +90,15 @@ do good work.
 > brainstorming. Plus it helps us get to know you better! Feel free to share
 > images in this section.
 
-<!-- TODO: briefly talk about your interests then delete this comment.
-Also, protip: you can preview what your response looks like by hitting
-the magnifying glass icon in the upper-right corner or pressing CTRL+K and
-then V. This kind of button combination is called a chord, for whatever
-reason -->
+I spend a lot of my free time listening to music and bicycling. However, as a career, I would like to use software to develop technology that will actually help people. I don't really know what this would look like - I have a job working on a web portal for high-performance computing, but I would also be interested in working on something like medical technology or anything else that impacts people.
 
 ## Assignment
-
-<!-- TODO: read the assignment section then delete this comment -->
 
 As previously stated, you are tasked with brainstorming 3 possible components.
 To aid you in this process, we have provided [some example components][example-components]
 that may help you in your brainstorming. All of these components were made at
 some point by one of your peers, so you should feel confident that you can
 accomplish any of them.
-
-<!-- TODO: browse the list of possible projects then delete this comment -->
 
 There is no requirement that you use any of the components listed above.
 If you want to model something else, go for it! Very common early object
@@ -123,8 +107,6 @@ etc. Make of this whatever seems interesting to you, and keep in mind that
 you're just brainstorming right now. You do not have to commit to anything.
 
 ### Example Component
-
-<!-- TODO: review this example component then delete this comment -->
 
 To help you brainstorm a few components, we've provided an example below of a
 component you already know well: NaturalNumber. We highly recommend that you
@@ -192,70 +174,86 @@ will likely refine your design to make your implementation easier to use.
 
 > Please use this section to share your designs.
 
-- Component Design #1: <!-- TODO: give component a name then delete this comment -->
+- Component Design #1: Music Playlist
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - A model of the organization of songs in a playlist. This model will represents songs in a specific order and allow the client to add and remove songs as well as change the order to any that they wish. Each song will be represented by two strings, one for the title and one for the artist.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - `void appendSong(String title, String artist)`: Adds a song to the end of the playlist
+    - `Pair<String, String> removeLastSong()`: removes the last song in the playlist.
+    - `boolean isEmpty()`: Returns true if the playlist has no songs.
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - `void addSong(int trackNumber, String title, String artist)`: Adds a song to the specified position in the playlist.
+    - `Pair<String, String> removeSong(int trackNumber)`: Removes the song at the specified position in the playlist.
+    - `void moveSong(int initialLocation, int finalLocation)`: Moves a song from one location in the playlist to another.
+    - `Pair<String, String> getSong(int trackNumber)`: Returns the song at the specified position.
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, this component needs to be mutable in order to be able to add, remove, and reorder songs.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, this would rely on `Map.Pair` to represent songs and `Sequence` to store the songs.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - No, this component likely would not need any enums or constants, as the only data that the client is interested in is the list of songs being represented.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes - by adding and removing songs, it is possible to find information about all songs in a playlist and move them into any order.
 
 
-- Component Design #2: <!-- TODO: give component a name then delete this comment -->
+- Component Design #2: Student ID
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - This component would model the information on a student ID.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    -`void createID(int number, String name, String imgpath)`: Creates a representation of the information on a student ID.
+    -`int getNumber()`: Returns the ID Number.
+    -`Pair<String> getNameAndImage()`: Returns the name and path to the image on the ID.
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - `String updateName(String newName)`: Update the name on the ID and return the old name.
+    - `String updateImage(String newPath)`: Update teh image path on the ID and return the old image path.
+    - `String getImage()`: Returns the path to the image.
+    - `String representInfo()`: Returns both the ID number and the name together as one single string.
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, it will be possible to overwrite information on the ID, as people's names and pictures can change.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, this will rely on `Map.Pair` in order to return both the name and image together.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - No, this component does not rely on any constants.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, one example would be that the string returned by `representInfo()` can be constructed by using the values from both `getNumber()` and `getNameAndImage()`
 
 
-- Component Design #3: <!-- TODO: give component a name then delete this comment -->
+- Component Design #3: Budget Tracker
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - This component will combine both monthly incomes and expenses that a person has to create and track a budget.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - `void addExpense(int cost, String name, String description)`: Adds a recurring monthly expense
+    - `void addIncome(int income, String name, String description)`: Adds a recurring monthly source of income
+    - `String[3] removeExpense()`: Removes and returns a monthly expense
+    - `String[3] removeIncome()`: Removes and returns a monthly income.
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - `int calculateNet()`: Calculates the net amount of money gained or lost over a month.
+    - `String createTable()`: Creates a table showing the incomes and expenses for the month.
+    - `int totalExpense()`: Returns the total amount in expenses.
+    - `int totalIncome()`: Returns the total amount in income.
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, this component is mutable because monthly budgets can change.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - No, this component would rely instead on a series of internal integer and string values.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - No, this component does not rely on any enums or constants.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, secondary methods can be implemented with kernel methods. For example, `totalExpense()` will be implemented using `removeExpense()` to sum information on each expense before then calling `addExpense()` to restore them.
 
 ## Post-Assignment
 
@@ -263,8 +261,6 @@ The following sections detail everything that you should do once you've
 completed the assignment.
 
 ### Changelog
-
-<!-- TODO: create CHANGELOG then delete this comment -->
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
@@ -303,8 +299,6 @@ of development.
 
 ### Submission
 
-<!-- TODO: read the submission instructions then delete this comment -->
-
 If you have completed the assignment using this template, we recommend that
 you convert it to a PDF before submission. If you're not sure how, check out
 this [Markdown to PDF guide][markdown-to-pdf-guide]. However, PDFs should be
@@ -313,11 +307,8 @@ all your work is there before submitting. For future assignments, you will
 just be submitting a link to a pull request. This will be the only time
 you have to submit any PDFs.
 
-<!-- TODO: upload a PDF of this document and the CHANGELOG to Carmen then delete this comment -->
 
 ### Peer Review
-
-<!-- TODO: review the peer review guidelines then delete this comment -->
 
 Following the completion of this assignment, you will be assigned three
 students' component brainstorming assignments for review. Your job during the
@@ -343,8 +334,6 @@ PDF to read this rubric as a table).
 If you'd like to give feedback for this assignment (or any assignment, really),
 make use of [this survey][survey]. Your feedback helps make assignments
 better for future students.
-
-<!-- TODO: follow the link to share your feedback then delete this comment -->
 
 [example-components]: https://therenegadecoder.com/code/the-never-ending-list-of-small-programming-project-ideas/
 [markdown-to-pdf-guide]: https://therenegadecoder.com/blog/how-to-convert-markdown-to-a-pdf-3-quick-solutions/
